@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PE.js</title>
+
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content:center;
+            align-items:center;
+            height:50vh;
+            
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1 this.style="text-align: center;"> Test page for Js project</h1>
+
+    
+    <h3 id="headingTotal"></h3>
+    <input id="amt" type="text">
+    <input id="des" type="text">
+    <button id="btn">+</button>
+<table id="allexpense"></table>
+
+    <script>
+        const headingEl= document.querySelector("#headingTotal");
+        //get heading element
+
+        const Inputdes= document.querySelector("#des");
+        const inputElement= document.querySelector("#amt");
+        let TotalExpense= 0;
+
+        //set it to TotalExpense i.e init 0
+
+        headingEl.textContent= TotalExpense;
+
+        allexpense= [];
+
+        function addExpense(){
+        
+        const textAmount = inputElement.value;   //catch integer
+        const expense= parseInt(textAmount,10);
+
+        const textdes=Inputdes.value;           //catch text
+        console.log({expense,textdes});         //console print obj
+         
+
+
+        
+            Expenseobj = {}
+
+            Expenseobj.description=textdes;
+            Expenseobj.cost= expense;
+            allexpense.push(Expenseobj)
+
+        TotalExpense = TotalExpense+ expense
+        console.log({TotalExpense});
+        headingEl.textContent= TotalExpense;
+
+        console.clear();
+        console.table(allexpense);
+        }
+
+        
+
+        //get button link
+        const element = document.querySelector("#btn");
+      
+
+        //listen click
+       element.addEventListener("click",addExpense,false);
+      
+
+        
+    
+       
+//counter
+        // let counter= 0;
+        // // increment function
+        // function counterIncrement(){
+
+        //     counter = counter+1;
+        //     console.log(counter);
+
+        // }
+ 
+    </script>    
+    
+</body>
+
+</html>
+
